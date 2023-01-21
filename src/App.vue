@@ -1,3 +1,3 @@
 <template>
-  <p>change me, then push to git</p>
+  <p>change me, then push to gits</p>
 </template>
