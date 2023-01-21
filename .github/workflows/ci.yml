@@ -1,7 +1,7 @@
 name: CI
 
-on: 
-  push: 
+on:
+  push:
     branches: [main]
   pull_request:
     branches: [main]
@@ -9,14 +9,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps: 
-    - uses: actions/checkout@v1
-    - name: Prepare
-      run: echo preparing for build ...
-    - name: Refreshing Package JSON
-      run: npm ci
-    - name: Delete the previous build ...
-      run: rm -rf /dist
-    - name: Building ...
-      run: npm run build
-    
+    steps:
+      - uses: actions/checkout@v1
+      - name: Prepare
+        run: echo preparing for build ...
+      - name: Check Active Directory
+        run: pwd
+      - name: Refreshing Package JSON
+        run: npm ci
+      - name: Delete the previous build ...
+        run: rm -rf /dist
+      - name: Building ...
+        run: npm run build
